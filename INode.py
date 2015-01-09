@@ -179,7 +179,7 @@ class INode(CommandCall):
         del data['result']
 
         # uncomment below line to see the returning data
-        print json.dumps(data)
+        # print json.dumps(data)
 
         # sd-agent expects this data(dictionary)
         return data
