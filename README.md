@@ -14,7 +14,13 @@ After sd-agent's next call to plugins, INode.py will be executed and the resulti
 Here you need to navigate to your "Devices", click the device that you have installed the plugin and click the Plugins tab.
 At the Plugins tab, the top left select box's default value is "All plugins" that lists the data from all plugins.
 Just select the "Inode" entry to see the INode plugin's data which should be a json containing the "exception", "error" and all the Mount points as keys.
-The numeric value indicates the percentage of the inodes used, hence the motivation behind this plugin is to monitor the percentage of inodes and notify via mail and sms in order to take action.
+
+The numeric value for each mount point indicates the percentage of the inodes used at that mount point.
+Hence the motivation behind this plugin is to monitor the percentage of inodes and notify via mail and sms in order to take action.
+
+The exception key usually is null, if the script encounters any errors than the exception will hold that.
+
+The error key usually is null, if the df command gets and returns any errors, that will be at here.
 
 _sample json_
 ```json
